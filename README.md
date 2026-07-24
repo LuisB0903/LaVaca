@@ -8,7 +8,7 @@
 
 Antes de realizar cualquier cambio, asegúrate de cumplir con estos requisitos:
 
-1. **Unity Versión:** [Escribe aquí la versión exacta de Unity, ej: 2022.3.Xf1].
+1. **Unity Versión:** 6000.3.10f1.
 2. **Git LFS:** Debes tener instalado Git LFS en tu computadora antes de clonar el proyecto. 
    * Ejecuta en tu terminal: `git lfs install`
 3. **Ajustes del Editor:** En Unity, verifica que esté activo el modo de texto:

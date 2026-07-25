@@ -106,6 +106,10 @@ public class CowRaycastCollector : MonoBehaviour
     public UnityEvent onCowCollected;
 
 
+    [Header("Puntaje")]
+    [SerializeField] private CowScoreManager scoreManager;
+
+
     [Header("Nave")]
 [SerializeField] private ShipWASDMovement shipMovement;
 
@@ -166,6 +170,11 @@ public class CowRaycastCollector : MonoBehaviour
 {
     shipMovement = GetComponentInParent<ShipWASDMovement>();
 }
+
+        if (scoreManager == null)
+        {
+            scoreManager = FindFirstObjectByType<CowScoreManager>();
+        }
     }
 
     private void OnEnable()
@@ -446,6 +455,7 @@ public class CowRaycastCollector : MonoBehaviour
                 finalScale;
 
             cow.CompleteCollection();
+            scoreManager?.RegisterCowCollected();
             onCowCollected?.Invoke();
 
             if (destroyCowAfterAbsorption)
